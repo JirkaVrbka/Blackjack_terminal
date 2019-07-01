@@ -23,6 +23,9 @@ def get_positive_int_with_default(default, msg=""):
             val = int(input(msg+"\n"))
             if val >= 0:
                 return val
+            else:
+                break;
         except ValueError:
             pass
         print("Unable to convert you value into number, so I set for you {}".format(default))
+        return default
